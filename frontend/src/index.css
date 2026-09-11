@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0f1724;
+  --bg-2: #1a2438;
+  --surface: #1e2a3d;
+  --surface-2: #273449;
+  --surface-3: #314058;
+
+  --blue: #6ba3d6;
+  --blue-soft: #8ab4e0;
+  --blue-deep: #4a7fb0;
+  --blue-bg: rgba(107, 163, 214, 0.12);
+  --blue-border: rgba(107, 163, 214, 0.25);
+
+  --gray: #8a9bb5;
+  --gray-soft: #a8b6c9;
+  --gray-muted: #5a6b85;
+
+  --text: #e6ecf5;
+  --text-h: #ffffff;
+  --text-soft: #8a9bb5;
+  --text-muted: #5a6b85;
+
+  --border: #2e3d54;
+  --border-soft: #26344a;
+
+  --danger: #e08b8b;
+  --danger-bg: rgba(224, 139, 139, 0.12);
+  --danger-border: rgba(224, 139, 139, 0.3);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(107, 163, 214, 0.10), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(138, 155, 181, 0.08), transparent 45%),
+    linear-gradient(180deg, #0f1724 0%, #1a2438 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 16px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: 0.3px;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--blue);
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--blue-soft);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-deep);
+}
+
+::selection {
+  background: var(--blue);
+  color: var(--bg);
+}
